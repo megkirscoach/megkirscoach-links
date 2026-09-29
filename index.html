@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megkirscoach — Links & Contacts</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .username { font-size: 16px; color: #38bdf8; margin-bottom: 12px; font-weight: 500; }
+        .bio { font-size: 14px; color: #94a3b8; margin-bottom: 32px; line-height: 1.5; }
+        
+        /* Video styles */
+        .video-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: #000;
+        }
+        video { width: 100%; display: block; }
+
+        /* Link buttons */
+        .links-list { display: flex; flex-direction: column; gap: 16px; }
+        .link-btn {
+            display: block;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .link-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Highlight styling for China-accessible services */
+        .cn-active {
+            background: rgba(255, 74, 86, 0.15);
+            border: 1px solid #ff4a56;
+        }
+        .cn-active:hover {
+            background: rgba(255, 74, 86, 0.3);
+        }
+        
+        /* Visual cue for Western apps requiring VPN inside mainland China */
+        .vpn-required {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Picture Placeholder -->
+        <img class="avatar" src="https://unsplash.com" alt="Avatar">
+        
+        <!-- Name & Username -->
+        <h1>megkirscoach</h1>
+        <p class="username">@megkirscoach</p>
+        <p class="bio">Welcome! Connect with me through my official social media channels and contacts below.</p>
+
+        <!-- Video Player (Empty placeholder for your upcoming video) -->
+        <div class="video-container">
+            <video controls poster="https://unsplash.com" src="">
+                Your browser does not support the video tag or the file is not uploaded yet.
+            </video>
+        </div>
+
+        <!-- Link Buttons -->
+        <div class="links-list">
+            
+            <!-- ACCESSIBLE IN CHINA WITHOUT VPN -->
+            <a href="mailto:megkirscoach@gmail.com" class="link-btn">
+                ✉️ Email Me (megkirscoach@gmail.com)
+            </a>
+            
+            <a href="#" class="link-btn cn-active" onclick="alert('My Xiaohongshu (RED) ID is: megkirscoach. Please copy it and search for me inside the app!')">
+                📕 Xiaohongshu / RED (ID: megkirscoach)
+            </a>
+            
+            <!-- REQUIRES VPN IN MAINLAND CHINA (Works perfectly in Europe & America) -->
+            <a href="https://tiktok.com" target="_blank" class="link-btn vpn-required">
+                🎵 TikTok
+            </a>
+            
+            <a href="https://youtube.com" target="_blank" class="link-btn vpn-required">
+                📺 YouTube
+            </a>
+            
+            <a href="https://facebook.com" target="_blank" class="link-btn vpn-required">
+                👥 Facebook
+            </a>
+            
+        </div>
+    </div>
+
+</body>
+</html>
